@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html data-ng-app="DKWapp">
+  <head>
+    <meta charset="utf-8">
+    <!-- For rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css" media="screen">
+    <title>Bootstrap BS</title>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" data-ng-controller="navController">
+      <div class="container">
+        <div class="navbar-header"><!-- Wrapping the collapse menu in .navbar-header for Bootstrap v.3 -->
+          <a href="#/">
+            <img class="navbar-brand" src="img/SK_RGB.png" alt="Svenska kyrkan" />
+          </a>
+          <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse collapse navbar-collapse navHeaderCollapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">Pauli <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li data-ng-class="{active: isActive('/pauli')}"><a href="#/pauli">Översikt</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Google+</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">Östra <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li data-ng-class="{active: isActive('/ostra')}"><a href="#/ostra">Översikt</a></li>
+                <li data-ng-class="{active: isActive('/ostra_kapell')}"><a href="#/ostra_kapell">Östra kapell</a></li>
+                <li data-ng-class="{active: isActive('/ostra_villa-hohog')}"><a href="#/ostra_villa-hohog">Kontor/Service <b class="caret"></b></a></li>
+                <li><a>Verkstäder/Garage <b class="caret"></b></a></li>
+                <li><a>Personal/Förråd <b class="caret"></b></a></li>
+                <li data-ng-class="{active: isActive('/ostra_vedbacken')}"><a href="#/ostra_vedbacken">Vedbacken</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">Fosie <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li data-ng-class="{active: isActive('/fosie')}"><a href="#/fosie">Översikt</a></li>
+                <li data-ng-class="{active: isActive('/fosie_personalhus')}"><a href="#/fosie_personalhus">Personalhus</a></li>
+                <li data-ng-class="{active: isActive('/fosie_kapell')}"><a href="#/fosie_kapell">Heliga korsets kapell</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">Limhamn <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li data-ng-class="{active: isActive('/limhamn')}"><a href="#/limhamn">Översikt</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Google+</a></li>
+              </ul>
+            </li>
+
+            <!-- <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="view_container" data-ng-view>
+
+      </div>
+    </div>
+
+    <!-- Latest minified jQuery -->
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <!-- AngularJS route -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- My AngularJS file -->
+    <script src="app/app.js"></script>
+    <!-- Angular Nav Controller -->
+    <script src="app/controllers/navController.js"></script>
+    <!-- My JS file -->
+    <script src="scripts/main.js"></script>
+    <!-- Wheelzoom plugin -->
+    <script src="scripts/wheelzoom.js"></script>
+  </body>
+</html>
